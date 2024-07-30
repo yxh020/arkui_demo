@@ -1,0 +1,9 @@
+{
+  "src": [
+    "pages/Index/index",
+    "pages/Button/index",
+    "pages/Theme/index",
+    "pages/OtherComponents/index",
+    "pages/Layout/index"
+  ]
+}
