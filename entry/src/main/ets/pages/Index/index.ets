@@ -31,6 +31,14 @@ struct PopupExample {
       Button('页面菜单')
         .bindMenu([
           {
+            value: 'home',
+            action: () => {
+              router.pushUrl({
+                url: 'pages/Home/index'
+              })
+            }
+          },
+          {
             value: 'button组件',
             action: () => {
               router.pushUrl({

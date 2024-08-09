@@ -21,6 +21,7 @@ class Contact {
   constructor(name: string, icon: Resource) {
     this.name = name;
     this.icon = icon;
+    console.log('--key',this.key)
   }
 }
 
@@ -30,23 +31,12 @@ struct Layout {
   @State color: string = '#DB7093';
   @State text: string = 'Portrait';
   @State isListReachEnd: boolean = false;
-  @State contacts: Array<Contact> = [
-    new Contact('小红', $r("app.media.iconA")),
-    new Contact('小明', $r("app.media.iconB")),
-    new Contact('小王', $r("app.media.iconC")),
-    new Contact('小红', $r("app.media.iconA")),
-    new Contact('小明', $r("app.media.iconB")),
-    new Contact('小王', $r("app.media.iconC")),
-    new Contact('小红', $r("app.media.iconA")),
-    new Contact('小明', $r("app.media.iconB")),
-    new Contact('小王', $r("app.media.iconC")),
-    new Contact('小红', $r("app.media.iconA")),
-    new Contact('小明', $r("app.media.iconB")),
-    new Contact('小王', $r("app.media.iconC")),
-  ]
+  @State contacts: Array<Contact> = []
 
   loadMore() {
-    this.contacts.push(new Contact(`新人_${this.contacts.length}`, $r("app.media.iconA")))
+    for (let index = 0; index < 5; index++) {
+      this.contacts.push(new Contact(`新人_${this.contacts.length}`, $r("app.media.iconA")))
+    }
   }
 
   listener: mediaquery.MediaQueryListener = mediaquery.matchMediaSync('(orientation: landscape)')
@@ -65,6 +55,12 @@ struct Layout {
         this.text = 'Portrait';
       }
     })
+
+    for (let index = 0; index < 10; index++) {
+      this.contacts.push(new Contact(`新人_${index}`, $r("app.media.iconA")))
+    }
+
+    console.log('--contacts',this.contacts.length)
   }
 
   // 改变设备横竖屏状态函数

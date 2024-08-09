@@ -4,6 +4,7 @@
     "pages/Button/index",
     "pages/Theme/index",
     "pages/OtherComponents/index",
-    "pages/Layout/index"
+    "pages/Layout/index",
+    "pages/Home/index"
   ]
 }
