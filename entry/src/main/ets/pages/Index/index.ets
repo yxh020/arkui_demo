@@ -71,6 +71,12 @@ struct PopupExample {
             }
           },
         ])
+      Button('资讯列表页')
+        .onClick(() => {
+          router.pushUrl({
+            url: 'pages/News/index'
+          })
+        })
     }.width('100%').padding({ top: 5 })
   }
 }

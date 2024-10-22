@@ -5,6 +5,8 @@
     "pages/Theme/index",
     "pages/OtherComponents/index",
     "pages/Layout/index",
-    "pages/Home/index"
+    "pages/Home/index",
+    "pages/News/index",
+    "pages/NewsDetail/index"
   ]
 }
